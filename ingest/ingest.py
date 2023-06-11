@@ -1,7 +1,7 @@
 from langchain.document_loaders import OnlinePDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-def ingest_data(path:str,extension:str ,pdf_url) :
+def ingest_data(path:str,extension:str ) :
     if path.startswith('http'):
         loader = OnlinePDFLoader(pdf_url).load()
         return loader
