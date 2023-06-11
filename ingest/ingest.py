@@ -16,7 +16,7 @@ def text_split(chunk_size, chunk_overlap, pdf_docs):
         chunk_overlap=chunk_overlap,
     )
 
-    # Create OpenAIEmbeddings and FAISS objects. Vectorize the chunks created above and save.
+    # Create OpenAIEmbeddings. Vectorize the chunks created above and save.
     documents = text_splitter.split_documents(pdf_docs)
     return documents
 
